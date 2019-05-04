@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>模块化开演变-使用闭包设定做函数作用域</title>
+</head>
+<body>
+<input type="number" id="number1">
+<select name="" id="flag">
+    <option value="0">+</option>
+    <option value="1">-</option>
+    <option value="2">*</option>
+    <option value="3">/</option>
+</select>
+<input type="number" id="number2">
+<button id="calculate">=</button>
+<input type="text" id="result">
+
+<script>
+    var calculator = (function () {
+        function add(x, y) {
+            return parseInt(x) + parseInt(y);
+        }
+
+        function subtract(x, y) {
+            return parseInt(x) - parseInt(y);
+        }
+
+        function multiply(x, y) {
+            return parseInt(x) * parseInt(y);
+        }
+
+        function divide(x, y) {
+            if (y === 0) {
+                return "error";
+            }
+            return parseInt(x) / parseInt(y);
+        }
+
+        return {
+            add: add,
+            subtract: subtract,
+            multiply: multiply,
+            divide: divide
+        }
+    })();
+
+    var number1 = document.getElementById('number1');
+    var number2 = document.getElementById('number2');
+    var flag = document.getElementById('flag');
+    var calculate = document.getElementById('calculate');
+    var result = document.getElementById('result');
+
+    calculate.addEventListener('click', function () {
+        var a = number1.value.trim();
+        var b = number2.value.trim();
+        switch (parseInt(flag.value)) {
+            case 0:
+                result.value = calculator.add(a, b);
+                break;
+            case 1:
+                result.value = calculator.subtract(a, b);
+                break;
+
+            case 2:
+                result.value = calculator.multiply(a, b);
+                break;
+
+            case 3:
+                result.value = calculator.divide(a, b);
+                break;
+        }
+    })
+
+</script>
+
+</body>
+</html>
+
+<!--
+笔记：
+
+用于计算的4个方法都被封装到了立即执行的匿名函数中，如果不添加返回值，外部是无法访问到的。
+添加了返回值之后，在全局通过 匿名函数.函数名() 的方式进行调用
+有效的公开了公共方法，并且可以隐藏一些私有的属性和元素，不会被全局的命名空间和变量污染，影响全局作用域。
+
+
+-->
