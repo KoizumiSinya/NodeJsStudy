@@ -1,0 +1,14 @@
+<!-- container -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+        integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+        crossorigin="anonymous"></script>
+
+<!--使用ejs语法，告诉页面 如果这个引用的文件不存在，就不会去加载这个script
+   artwork： 数据源中的一个字段参数     -->
+<% if(typeof artwork != "undefined") { %>
+<script src="/js/pixgrid.js"></script>
+<% } %>
+
+<!--自动刷新启动JS 由于没有install reload这个库，暂时屏蔽这段代码的使用-->
+<!--<script src="/reload/reload.js"></script>-->

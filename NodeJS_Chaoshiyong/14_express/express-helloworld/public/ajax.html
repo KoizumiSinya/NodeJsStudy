@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <title>jax html</title>
+</head>
+<body>
+<script type="text/javascript">
+    function get_jsonp() {
+        $.getJSON("http://127.0.0.1:8989/jsonp?callback=?", (data) => {
+            $('#input-jsonp').val('JSONP info:' + data.status);
+        });
+    }
+
+    function get_json() {
+        $.getJSON("json", (data) => {
+            $('#input-json').val('JSON info:' + data.status);
+        });
+    }
+</script>
+<p>Express Ajax</p>
+
+<p>
+    <a href="javascript:get_jsonp();">点击调用 -jsonp</a><br/>
+    <input id="input-jsonp" type="text" size="48"/><br/>
+</p>
+
+<p>
+    <a href="javascript:get_json();">点击调用 -json</a><br/>
+    <input id="input-json" type="text" size="48"/><br/>
+</p>
+</body>
+</html>

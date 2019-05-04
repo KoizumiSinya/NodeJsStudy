@@ -1,0 +1,15 @@
+{
+  "name": "demo3",
+  "version": "1.0.0",
+  "description": "https://github.com/planetoftheweb/expressjs Lynda上的一个教学视频Demo",
+  "main": "app/app.js",
+  "scripts": {
+    "start": "node app/app.js"
+  },
+  "author": "Sinya",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "~4.16.3"
+  }
+}
