@@ -1,0 +1,70 @@
+{
+  "code": 0,
+  "message": "5 notifications are returned",
+  "data": {
+    "language": "en",
+    "total": 52,
+    "resultNo": 5,
+    "unread": 2,
+    "pageSize": 5,
+    "currentPage": 1,
+    "totalPage": 11,
+    "notifications": [
+      {
+        "id": 130,
+        "type": "system",
+        "createdDate": "2018-10-22 02:35:07",
+        "imageUrl": "http://xxxxxxxxxxxx.com/xxx/xxxx/xxxxx/xxxx.png",
+        "content": "<b>Apple</b> is now on sales",
+        "targetType": "promotion",
+        "targetId": 9,
+        "targetUrl": null,
+        "read": true
+      },
+      {
+        "id": 117,
+        "type": "personal",
+        "createdDate": "2018-10-22 01:18:04",
+        "imageUrl": "http://xxxxxxxxxxxx.com/xxx/xxxx/xxxxx/xxxx.png",
+        "content": "<b>Cary Joseph</b> started following you",
+        "targetType": "user",
+        "targetId": 16,
+        "targetUrl": null,
+        "read": false
+      },
+      {
+        "id": 107,
+        "type": "personal",
+        "createdDate": "2018-10-21 17:51:33",
+        "imageUrl": "http://xxxxxxxxxxxx.com/xxx/xxxx/xxxxx/xxxx.png",
+        "content": "<b>Shawn Lui</b> reviewed your recipe <b>Creamy Vegan Banana Pudding</b>",
+        "targetType": "recipe",
+        "targetId": 114,
+        "targetUrl": null,
+        "read": false
+      },
+      {
+        "id": 95,
+        "type": "community",
+        "createdDate": "2018-10-21 17:49:12",
+        "imageUrl": "http://xxxxxxxxxxxx.com/xxx/xxxx/xxxxx/xxxx.png",
+        "content": "<b>Christine Choo</b> added a new recipe <b>Roasted Potato Stick with paprika</b>",
+        "targetType": "url",
+        "targetId": null,
+        "targetUrl": "https://www.google.com",
+        "read": true
+      },
+      {
+        "id": 94,
+        "type": "community",
+        "createdDate": "2018-10-19 05:01:57",
+        "imageUrl": "http://xxxxxxxxxxxx.com/xxx/xxxx/xxxxx/xxxx.png",
+        "content": "<b>Mike Richards</b> edited a recipe that you starred <b>Chicken Avocado Quesedillias</b>",
+        "targetType": "recipe",
+        "targetId": 293,
+        "targetUrl": null,
+        "read": true
+      }
+    ]
+  }
+}

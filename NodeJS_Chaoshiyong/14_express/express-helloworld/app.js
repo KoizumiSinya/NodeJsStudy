@@ -26,6 +26,10 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+//启动的文件是 bin 下的www 也可以使用 npm start启动这个demo项目
+//访问主页，在浏览器输入 127.0.0.1:8989
+//访问Hello World，在浏览器输入 127.0.0.1:8989/helloworld
+
 app.use('/', index);
 app.use('/users', users);
 
